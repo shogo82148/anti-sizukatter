@@ -4,7 +4,7 @@
 import codecs
 
 def cost(word):
-    return int(max(-36000, -400 * (len(word) ** 1.5) ))
+    return int(max(-32000, -400 * (len(word) ** 1.5) ))
 
 def make_sizukatter(words):
     with codecs.open("dict/words.csv", "w", "utf-8") as f:
