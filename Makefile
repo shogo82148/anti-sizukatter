@@ -14,3 +14,9 @@ anti-dict-igo.zip: anti-dict-igo/word.dat
 
 dict/words.csv anti-dict/words.csv: words.csv
 	python make-dic.py
+
+clean:
+	rm dict/words.csv anti-dict/words.csv
+	rm dict-igo/*
+	rm anti-dict-igo/*
+	rm dict-igo.zip anti-dict-igo.zip
