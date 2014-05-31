@@ -7,10 +7,10 @@ anti-dict-igo/word.dat: anti-dict/words.csv
 	java -cp igo-0.4.5.jar net.reduls.igo.bin.BuildDic anti-dict-igo anti-dict utf-8
 
 dict-igo.zip: dict-igo/word.dat
-	zip -D -9 dict-igo.zip dict-igo/*
+	cd dict-igo && zip -9 ../dict-igo.zip *
 
 anti-dict-igo.zip: anti-dict-igo/word.dat
-	zip -D -9 anti-dict-igo.zip anti-dict-igo/*
+	cd anti-dict-igo && zip -9 ../anti-dict-igo.zip *
 
 dict/words.csv anti-dict/words.csv: words.csv
 	python make-dic.py
